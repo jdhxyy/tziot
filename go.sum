@@ -4,7 +4,7 @@ github.com/jdhxyy/dcom v0.0.0-20210320120626-75121ec909fe h1:AKB2C3um31SBOY9Qnst
 github.com/jdhxyy/dcom v0.0.0-20210320120626-75121ec909fe/go.mod h1:kcKEd0tkw7pJb9js0AXYsNOnnhH81REB8rMeOQLvYbg=
 github.com/jdhxyy/knock v0.0.0-20210312015805-da08fbd8e1e3 h1:re/5T51C1/ni9OTz8U2Vi0HaG1+PF0YcTyMkwPnUO2A=
 github.com/jdhxyy/knock v0.0.0-20210312015805-da08fbd8e1e3/go.mod h1:jswTBkOcUEtJStgUFPGfEC7dvELpgweDtS01iYg3ySs=
-github.com/jdhxyy/lagan v0.0.0-20210317001749-f1214addc3af h1:CpwpYwawkRza3eGaHKXwEoyvbzRG40Vvw2c8r9BLshA=
-github.com/jdhxyy/lagan v0.0.0-20210317001749-f1214addc3af/go.mod h1:thKkxhIW5/LKfiKOzNj/X+BU4LmlEZHRZPwT/EVFwqg=
+github.com/jdhxyy/lagan v0.0.0-20210320045933-9bf9e69e4f0b h1:X0TkfhhMwxgpsrPDkQ42mwtc9ePZdA0uszZOsodJPrg=
+github.com/jdhxyy/lagan v0.0.0-20210320045933-9bf9e69e4f0b/go.mod h1:thKkxhIW5/LKfiKOzNj/X+BU4LmlEZHRZPwT/EVFwqg=
 github.com/jdhxyy/utz v0.0.0-20210311024447-a7492d990e9e h1:s5/R3xZUbcKIWgWVoB4724fh4AZpFeY/HVG59JqlCpQ=
 github.com/jdhxyy/utz v0.0.0-20210311024447-a7492d990e9e/go.mod h1:eKM112NP2qpGHq8Sh9RQIH42YobWXKja0AFhY/OKQCs=
