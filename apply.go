@@ -58,7 +58,7 @@ func dealAssignSlaveRouter(req []uint8, params ...interface{}) ([]uint8, bool) {
 	port := (int(req[j]) << 8) + int(req[j+1])
 	j += 2
 	addr := net.UDPAddr{IP: net.IPv4(ip[0], ip[1], ip[2], ip[3]), Port: port}
-	parent.pipe = dcom.AddrToPort(&addr)
+	parent.pipe = dcom.AddrToPipe(&addr)
 
 	lagan.Info(tag, "apply success.parent ia:0x%x addr:%v cost:%d", parent.ia, addr, req[j])
 	return nil, false

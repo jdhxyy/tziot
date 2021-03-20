@@ -25,5 +25,5 @@ func Call(pipe uint64, dstIA uint64, rid int, timeout int, req []uint8) ([]uint8
 
 // Register 注册服务回调函数
 func Register(rid int, callback dcom.CallbackFunc) {
-	dcom.Register(0, rid, callback)
+	dcom.Register(protocolNum, rid, callback)
 }

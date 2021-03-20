@@ -49,7 +49,7 @@ func BindPipeNet(ia uint64, pwd string, ip string, port int) (pipe uint64, err e
 		pipeNet,
 		ia,
 		func(pipe uint64, data []uint8) {
-			addr := dcom.PortToAddr(pipe)
+			addr := dcom.PipeToAddr(pipe)
 			_, err := listener.WriteToUDP(data, addr)
 			if err != nil {
 				lagan.Error(tag, "udp send error:%v addr:%v", err, addr)
@@ -90,7 +90,7 @@ func netRxThread(listener *net.UDPConn, pipe uint64) {
 		}
 		lagan.Info(tag, "udp rx:%v len:%d", addr, num)
 		lagan.PrintHex(tag, lagan.LevelDebug, data[:num])
-		PipeReceive(dcom.AddrToPort(addr), data[:num])
+		PipeReceive(dcom.AddrToPipe(addr), data[:num])
 	}
 }
 
