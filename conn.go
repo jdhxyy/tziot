@@ -76,7 +76,7 @@ func sendConnFrame() {
 	// 前缀长度
 	body = append(body, 64)
 	// 子膜从机固定单播地址
-	body = append(body, make([]uint8, 8)...)
+	body = append(body, make([]uint8, utz.IALen)...)
 	// 开销值
 	body = append(body, 0)
 	body = utz.BytesToFlpFrame(body, true, 0)

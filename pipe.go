@@ -5,6 +5,7 @@
 package tziot
 
 import (
+	"errors"
 	"github.com/jdhxyy/dcom"
 	"github.com/jdhxyy/lagan"
 	"github.com/jdhxyy/utz"
@@ -30,6 +31,7 @@ type tApi struct {
 var pipes map[uint64]tApi
 var pipeNum uint64
 var once sync.Once
+var isBindPipeNet = false
 
 func init() {
 	pipes = make(map[uint64]tApi)
@@ -37,6 +39,10 @@ func init() {
 
 // BindPipeNet 绑定网络管道.绑定成功后返回管道号
 func BindPipeNet(ia uint64, pwd string, ip string, port int) (pipe uint64, err error) {
+	if isBindPipeNet {
+		return pipeNet, errors.New("already bind pipe net")
+	}
+
 	localPwd = pwd
 	addr := net.UDPAddr{IP: net.ParseIP(ip), Port: port}
 	listener, err := net.ListenUDP("udp", &addr)
@@ -45,6 +51,7 @@ func BindPipeNet(ia uint64, pwd string, ip string, port int) (pipe uint64, err e
 		return 0, nil
 	}
 
+	isBindPipeNet = true
 	bind(
 		pipeNet,
 		ia,
@@ -151,6 +158,7 @@ func pipeSend(pipe uint64, data []uint8) {
 		}
 		v.send(parent.pipe, data)
 	} else {
+		// 注意:发给核心网的帧也通过此处发送
 		v.send(pipe, data)
 	}
 }

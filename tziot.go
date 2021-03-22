@@ -20,7 +20,7 @@ func Call(pipe uint64, dstIA uint64, rid int, timeout int, req []uint8) ([]uint8
 	if pipe >= pipeNet {
 		pipe = parent.pipe
 	}
-	return dcom.Call(protocolNum, parent.pipe, dstIA, rid, timeout, req)
+	return dcom.Call(protocolNum, pipe, dstIA, rid, timeout, req)
 }
 
 // Register 注册服务回调函数
