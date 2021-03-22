@@ -11,6 +11,11 @@ import (
 	"time"
 )
 
+// 最大连接次数.超过连接次数这回清除父路由IA地址,重连父路由
+const connNumMax = 3
+
+var connNum = 0
+
 func init() {
 	knock.Register(utz.HeaderCmp, utz.CmpMsgTypeAckConnectParentRouter, dealAckConnectParentRouter)
 	go connThread()
@@ -37,6 +42,7 @@ func dealAckConnectParentRouter(req []uint8, params ...interface{}) ([]uint8, bo
 		return nil, false
 	}
 
+	connNum = 0
 	parent.isConn = true
 	parent.cost = req[j]
 	parent.timestamp = time.Now().Unix()
@@ -53,6 +59,13 @@ func connThread() {
 		}
 
 		if parent.ia != utz.IAInvalid {
+			connNum += 1
+			if connNum > connNumMax {
+				connNum = 0
+				parent.ia = utz.IAInvalid
+				lagan.Warn(tag, "conn num is too many!")
+				continue
+			}
 			lagan.Info(tag, "send conn frame")
 			sendConnFrame()
 		}
