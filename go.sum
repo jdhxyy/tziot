@@ -1,11 +1,11 @@
 github.com/jdhxyy/crc16 v0.0.0-20210228220550-7713e2f73123 h1:A3y5GyayKrpj+4EwUnvb8VucRShsbX4PDXlcRzTRunQ=
 github.com/jdhxyy/crc16 v0.0.0-20210228220550-7713e2f73123/go.mod h1:Bn2AQAKww6qAfp1Grz+AK2cnYKB/9a2WOcfkidTAWJQ=
-github.com/jdhxyy/dcom v0.0.0-20210323034529-9b7cb6983783 h1:ddtKlAemBAOF0FKp1ZZyUue0AUSxetwhjZQNtOiQpxU=
-github.com/jdhxyy/dcom v0.0.0-20210323034529-9b7cb6983783/go.mod h1:HbQiA61rLE0EAZMgpPdLD/janc1/V8c7N9Pu+1reU8E=
+github.com/jdhxyy/dcom v0.0.0-20210323235108-4178ec9b93ac h1:LbaKTUjV/s7kC76sHZrL8F5FlkFp9hAK1qG7BhH8JQA=
+github.com/jdhxyy/dcom v0.0.0-20210323235108-4178ec9b93ac/go.mod h1:HbQiA61rLE0EAZMgpPdLD/janc1/V8c7N9Pu+1reU8E=
 github.com/jdhxyy/knock v0.0.0-20210312015805-da08fbd8e1e3 h1:re/5T51C1/ni9OTz8U2Vi0HaG1+PF0YcTyMkwPnUO2A=
 github.com/jdhxyy/knock v0.0.0-20210312015805-da08fbd8e1e3/go.mod h1:jswTBkOcUEtJStgUFPGfEC7dvELpgweDtS01iYg3ySs=
 github.com/jdhxyy/lagan v0.0.0-20210317001749-f1214addc3af/go.mod h1:thKkxhIW5/LKfiKOzNj/X+BU4LmlEZHRZPwT/EVFwqg=
-github.com/jdhxyy/lagan v0.0.0-20210323015255-9928b1f9c65a h1:Do+sGDl8b4QpWE5O1e3TPvKovVV3zljI/4iSpJi7Kq4=
-github.com/jdhxyy/lagan v0.0.0-20210323015255-9928b1f9c65a/go.mod h1:thKkxhIW5/LKfiKOzNj/X+BU4LmlEZHRZPwT/EVFwqg=
+github.com/jdhxyy/lagan v0.0.0-20210323233702-bfbc48dadbe7 h1:VwVfRlq6q3aEyNwV7XhyR29v4r0hUAjBaUpXFcaZCEQ=
+github.com/jdhxyy/lagan v0.0.0-20210323233702-bfbc48dadbe7/go.mod h1:thKkxhIW5/LKfiKOzNj/X+BU4LmlEZHRZPwT/EVFwqg=
 github.com/jdhxyy/utz v0.0.0-20210322021828-fec564b238e3 h1:U6ae7f1HOaW0jRRjmkYbEArhWhYaG1rbLSOdu0ym0Lk=
 github.com/jdhxyy/utz v0.0.0-20210322021828-fec564b238e3/go.mod h1:eKM112NP2qpGHq8Sh9RQIH42YobWXKja0AFhY/OKQCs=
