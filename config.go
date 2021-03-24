@@ -28,9 +28,8 @@ var localIA uint64
 var localPwd string
 
 // 核心网参数
-// todo
 var coreIA uint64 = 0x2141000000000002
-var coreIP = "192.168.1.119"
+var coreIP = "115.28.86.171"
 var corePort = 12914
 var corePipe uint64
 
