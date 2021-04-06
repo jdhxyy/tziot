@@ -2,7 +2,7 @@
 
 欢迎前往社区交流：[海萤物联网社区](http://www.ztziot.com)
 
-[在线文档](http://jdhxyy.github.io.tziot)
+[在线文档](https://jdhxyy.github.io/tziot/)
 
 ## 介绍
 **海萤物联网是真正实现万物互联的网络**。在海萤物联网中，最基本的组成单元是节点（Node）。节点可以是硬件设备，也可以是软件。
@@ -78,6 +78,3 @@ resp, err := tziot.Call(pipe, 0x2141000000000004, 1, 1000, nil)
 
 ### 计划支持的硬件
 - 树莓派pico
-
-
-
