@@ -12,9 +12,9 @@ func TestBindPipeNet(t *testing.T) {
 	lagan.SetFilterLevel(lagan.LevelDebug)
 	lagan.EnableColor(true)
 
-	pipe, err := BindPipeNet(0x2141000000000401, "abc123", "192.168.1.119", 12021)
-	if err != nil {
-		fmt.Println("err:", err)
+	pipe := BindPipeNet(0x2141000000000401, "abc123", "192.168.1.119", 12021)
+	if pipe == 0 {
+		fmt.Println("bind pipe net failed")
 		return
 	}
 	fmt.Println(pipe)
@@ -24,9 +24,9 @@ func TestBindPipeNet(t *testing.T) {
 			time.Sleep(time.Second)
 			continue
 		}
-		resp, err := Call(pipe, 0x2141000000000402, 2, 1000, []uint8{5, 6, 7})
+		resp, err := Call(pipe, 0x2141000000000004, 1, 1000, nil)
 		fmt.Println("call", string(resp), err)
-		time.Sleep(time.Second)
+		time.Sleep(10 * time.Second)
 	}
 
 	select {}

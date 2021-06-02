@@ -10,9 +10,6 @@ import (
 	"github.com/jdhxyy/utz"
 )
 
-// dcom是否初始化
-var isDComInit = false
-
 // initDCom 初始化dcom.全局只应该初始化一次
 func initDCom() {
 	var param dcom.LoadParam
@@ -23,7 +20,6 @@ func initDCom() {
 	dcom.Load(&param)
 
 	standardLayerRegisterRxObserver(dcomDealStandardLayerRx)
-	isDComInit = true
 }
 
 func dcomSend(protocol int, pipe uint64, dstIA uint64, data []uint8) {

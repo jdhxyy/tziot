@@ -16,11 +16,6 @@ const (
 	frameMaxLen = 4096
 
 	protocolNum = 0
-
-	// 连接间隔.单位:s
-	connInterval = 30
-	// 连接超时时间.单位:s
-	connTimeoutMax = 120
 )
 
 // 本机单播地址
@@ -42,6 +37,15 @@ var dcomRetryInterval = 500
 
 func init() {
 	corePipe = dcom.AddrToPipe(&net.UDPAddr{IP: net.ParseIP(coreIP), Port: corePort})
+}
+
+// ConfigLocalParam 配置本节点参数
+// ia是本节点地址,pwd是本节点密码
+func ConfigLocalParam(ia uint64, pwd string) {
+	localIA = ia
+	localPwd = pwd
+
+	once.Do(initDCom)
 }
 
 // ConfigCoreParam 配置核心网参数

@@ -6,19 +6,15 @@ package tziot
 
 import (
 	"github.com/jdhxyy/dcom"
-	"github.com/jdhxyy/utz"
+	"github.com/jdhxyy/tzaccess"
 )
 
 // Call RPC同步调用
 // timeout是超时时间,单位:ms.为0表示不需要应答
 // 返回值是应答字节流和错误码.错误码非0表示调用失败
 func Call(pipe uint64, dstIA uint64, rid int, timeout int, req []uint8) ([]uint8, int) {
-	if parent.ia == utz.IAInvalid || parent.isConn == false {
-		// todo
+	if tzaccess.IsConn() == false {
 		return nil, dcom.SystemErrorRxTimeout
-	}
-	if pipe >= pipeNet {
-		pipe = parent.pipe
 	}
 	return dcom.Call(protocolNum, pipe, dstIA, rid, timeout, req)
 }
@@ -26,4 +22,9 @@ func Call(pipe uint64, dstIA uint64, rid int, timeout int, req []uint8) ([]uint8
 // Register 注册服务回调函数
 func Register(rid int, callback dcom.CallbackFunc) {
 	dcom.Register(protocolNum, rid, callback)
+}
+
+// // IsConn 是否连接核心网
+func IsConn() bool {
+	return tzaccess.IsConn()
 }
