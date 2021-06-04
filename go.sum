@@ -8,7 +8,7 @@ github.com/jdhxyy/lagan v0.0.0-20210323233702-bfbc48dadbe7 h1:VwVfRlq6q3aEyNwV7X
 github.com/jdhxyy/lagan v0.0.0-20210323233702-bfbc48dadbe7/go.mod h1:thKkxhIW5/LKfiKOzNj/X+BU4LmlEZHRZPwT/EVFwqg=
 github.com/jdhxyy/lagan v0.0.0-20210411225308-30d428521fc7 h1:ix0JGWQOQAitrOrV8iar7a8EKVXKxveJ7VHMC5yGCak=
 github.com/jdhxyy/lagan v0.0.0-20210411225308-30d428521fc7/go.mod h1:thKkxhIW5/LKfiKOzNj/X+BU4LmlEZHRZPwT/EVFwqg=
-github.com/jdhxyy/tzaccess v0.0.0-20210604001039-5df40e244efc h1:vlYdgHB3JBLdxEhTRZxceaHGxtNRqM0TtV8nw4coPOQ=
-github.com/jdhxyy/tzaccess v0.0.0-20210604001039-5df40e244efc/go.mod h1:VrIvTxtqSH7j5jhZxDdZcCw8N8i7JWdltQEBjht5iCc=
-github.com/jdhxyy/utz v0.0.0-20210417100232-23c039ae9dfd h1:kRPAD3N7GeAkoWQvQ1A6YuX0tpKEvms2/q3DFud1RY0=
-github.com/jdhxyy/utz v0.0.0-20210417100232-23c039ae9dfd/go.mod h1:eKM112NP2qpGHq8Sh9RQIH42YobWXKja0AFhY/OKQCs=
+github.com/jdhxyy/tzaccess v0.0.0-20210604032836-f7b35b42a705 h1:Hb4q4ZUrCWDcNXZwZimRTZ1qwPSW7695VFNcnDRvNFM=
+github.com/jdhxyy/tzaccess v0.0.0-20210604032836-f7b35b42a705/go.mod h1:teq/97lBrr6slpdKC0pPCjlCh8+tjMhDKFzXovBY2vY=
+github.com/jdhxyy/utz v0.0.0-20210604030251-88e52c9758f4 h1:ElPsTNST53K86gDd27S+XjVq5mFG9F5aMea14dYqksI=
+github.com/jdhxyy/utz v0.0.0-20210604030251-88e52c9758f4/go.mod h1:eKM112NP2qpGHq8Sh9RQIH42YobWXKja0AFhY/OKQCs=
