@@ -1,3 +1,8 @@
+github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/huandu/go-assert v1.1.5 h1:fjemmA7sSfYHJD7CUqs9qTwwfdNAx7/j2/ZlHXzNB3c=
+github.com/huandu/go-assert v1.1.5/go.mod h1:yOLvuqZwmcHIC5rIzrBhT7D3Q9c3GFnd0JrPVhn/06U=
 github.com/jdhxyy/crc16 v0.0.0-20210228220550-7713e2f73123 h1:A3y5GyayKrpj+4EwUnvb8VucRShsbX4PDXlcRzTRunQ=
 github.com/jdhxyy/crc16 v0.0.0-20210228220550-7713e2f73123/go.mod h1:Bn2AQAKww6qAfp1Grz+AK2cnYKB/9a2WOcfkidTAWJQ=
 github.com/jdhxyy/dcom v0.0.0-20210415032121-a09548d7af99 h1:AhtQFRwfa2ibAuLcge7k9wr+He2uB57l6rtA1CM8t5U=
@@ -8,7 +13,14 @@ github.com/jdhxyy/lagan v0.0.0-20210323233702-bfbc48dadbe7 h1:VwVfRlq6q3aEyNwV7X
 github.com/jdhxyy/lagan v0.0.0-20210323233702-bfbc48dadbe7/go.mod h1:thKkxhIW5/LKfiKOzNj/X+BU4LmlEZHRZPwT/EVFwqg=
 github.com/jdhxyy/lagan v0.0.0-20210411225308-30d428521fc7 h1:ix0JGWQOQAitrOrV8iar7a8EKVXKxveJ7VHMC5yGCak=
 github.com/jdhxyy/lagan v0.0.0-20210411225308-30d428521fc7/go.mod h1:thKkxhIW5/LKfiKOzNj/X+BU4LmlEZHRZPwT/EVFwqg=
+github.com/jdhxyy/skiplist v1.1.4 h1:L7VafO6vgwsKQ42nYj4byjxVc16zI5L0u7n6k9JNsbE=
+github.com/jdhxyy/skiplist v1.1.4/go.mod h1:jdOjeSqFlHJ0sLBiEy8um5ymmwO0K3TEMeGYrX9GxoE=
 github.com/jdhxyy/tzaccess v0.0.0-20210604032836-f7b35b42a705 h1:Hb4q4ZUrCWDcNXZwZimRTZ1qwPSW7695VFNcnDRvNFM=
 github.com/jdhxyy/tzaccess v0.0.0-20210604032836-f7b35b42a705/go.mod h1:teq/97lBrr6slpdKC0pPCjlCh8+tjMhDKFzXovBY2vY=
 github.com/jdhxyy/utz v0.0.0-20210604030251-88e52c9758f4 h1:ElPsTNST53K86gDd27S+XjVq5mFG9F5aMea14dYqksI=
 github.com/jdhxyy/utz v0.0.0-20210604030251-88e52c9758f4/go.mod h1:eKM112NP2qpGHq8Sh9RQIH42YobWXKja0AFhY/OKQCs=
+github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
+github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/yaml.v2 v2.2.2/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=

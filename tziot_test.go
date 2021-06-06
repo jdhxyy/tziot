@@ -31,3 +31,14 @@ func TestBindPipeNet(t *testing.T) {
 
 	select {}
 }
+
+func TestCase1(t *testing.T) {
+	rtAdd(0x1234567812345677, 11)
+	rtAdd(0x1234567812345678, 12)
+	rtAdd(0x1234567812345679, 13)
+	fmt.Println(rtFind(0x1234567812345678))
+	rtAdd(0x1234567812345678, 1234)
+	fmt.Println(rtFind(0x1234567812345678))
+	rtDelete(0x1234567812345678)
+	fmt.Println(rtFind(0x1234567812345678))
+}

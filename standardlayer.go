@@ -20,7 +20,21 @@ func standardLayerRx(pipe uint64, data []uint8) {
 	if header == nil {
 		return
 	}
-	notifyStandardLayerObservers(data[utz.NLv1HeadLen:], header, pipe)
+
+	// 处理代理头部
+	offset := utz.NLv1HeadLen
+	if header.NextHead == utz.HeaderAgent {
+		agentHeader, num := utz.BytesToAgentHeader(data[offset:])
+		if num == 0 {
+			lagan.Warn(tag, "parse agent header failed")
+			return
+		}
+		offset += num
+		rtAdd(header.SrcIA, agentHeader.IA)
+	} else {
+		rtDelete(header.SrcIA)
+	}
+	notifyStandardLayerObservers(data[offset:], header, pipe)
 }
 
 func getStandardHeader(data []uint8) *utz.StandardHeader {
@@ -64,7 +78,22 @@ func standardLayerSend(data []uint8, standardHeader *utz.StandardHeader, pipe ui
 	if standardHeader.PayloadLen != uint16(dataLen) {
 		standardHeader.PayloadLen = uint16(dataLen)
 	}
+
+	// 判断是否有代理节点
+	var routeHeaderBytes []uint8 = nil
+	agentIA := rtFind(standardHeader.DstIA)
+	if agentIA != utz.IAInvalid {
+		routeHeader := utz.RouteHeader{NextHead: standardHeader.NextHead, RouteNum: 1, IsStrict: true, IAList: []uint64{agentIA}}
+		routeHeaderBytes = utz.RouteHeaderToBytes(&routeHeader)
+
+		standardHeader.NextHead = utz.HeaderRoute
+		standardHeader.PayloadLen += uint16(len(routeHeaderBytes))
+	}
+
 	frame := utz.StandardHeaderToBytes(standardHeader)
+	if routeHeaderBytes != nil {
+		frame = append(frame, routeHeaderBytes...)
+	}
 	frame = append(frame, data...)
 	pipeSend(pipe, frame)
 }
